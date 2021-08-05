@@ -32,3 +32,4 @@ http.createServer(function (req, res) {
     res.end();
   });
 }).listen(3000);
+console.log("程序启动在 3000端口")
