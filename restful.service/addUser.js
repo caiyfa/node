@@ -13,6 +13,7 @@ var user = {
 }
 
 app.get('/addUser', function (req, res) {
+   res.setHeader('Content-Type', 'text/html; charset=utf8');
    console.log(__dirname)
    // 读取已存在的数据
    fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {

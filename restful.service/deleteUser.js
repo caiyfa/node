@@ -5,7 +5,7 @@ var fs = require("fs");
  
 var bowser=require("../system/bowser")
 app.get('/deleteUser/:id', function (req, res) {
-
+  res.setHeader('Content-Type', 'text/html; charset=utf8');
    // First read existing users.
    fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
        data = JSON.parse( data );

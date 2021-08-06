@@ -4,6 +4,8 @@ var fs = require("fs");
 
 var bowser=require("../system/bowser")
 app.get('/:id', function (req, res) {
+  //解决中文乱码
+  res.setHeader('Content-Type', 'text/html; charset=utf8');
    // 首先我们读取已存在的用户
    fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
        data = JSON.parse( data );
